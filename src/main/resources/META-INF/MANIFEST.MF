@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Implementation-Title: ArborVaadin
+Implementation-Version: 0.0.1
+Vaadin-Package-Version: 1
+Vaadin-Widgetsets: org.vaadin.arborgraph.ArborGraphWidgetset

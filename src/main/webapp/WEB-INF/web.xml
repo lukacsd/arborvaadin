@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<display-name>Arbor-Vaadin</display-name>
+
+	<context-param>
+		<param-name>productionMode</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+
+	<servlet>
+		<servlet-name>arbor</servlet-name>
+		<servlet-class>org.vaadin.arborgraph.ArborApplicationServlet</servlet-class>
+
+		<init-param>
+			<param-name>application</param-name>
+			<param-value>org.vaadin.arborgraph.demo.DemoApplication</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>widgetset</param-name>
+			<param-value>org.vaadin.arborgraph.ArborGraphWidgetset</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>arbor</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+
+</web-app>
